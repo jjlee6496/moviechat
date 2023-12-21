@@ -13,7 +13,7 @@ https://chat.openai.com/share/fafd4b02-030d-4b8b-8f89-88adbb985c91
 
 
 # To-do
-* [] ChatAgent 구현
-* [] Tools - weather.py 구현 
-* [] Tools - search.py 구현 
-* [] streamlit으로 chat 환경 구현
+* [ ] ChatAgent 구현
+* [ ] Tools - weather.py 구현 
+* [ ] Tools - search.py 구현 
+* [ ] streamlit으로 chat 환경 구현
