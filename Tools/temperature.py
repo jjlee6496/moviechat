@@ -1,7 +1,7 @@
-# 출처 OpenAI
+# 출처 https://learn.deeplearning.ai/functions-tools-agents-langchain/lesson/7/conversational-agent
 import requests
 import datetime
-from pydantic import BaseModel, Field
+from pydantic.v1 import BaseModel, Field
 from langchain.agents import tool
 
 # Define the input schema
