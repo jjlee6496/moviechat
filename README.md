@@ -9,11 +9,13 @@ https://chat.openai.com/share/fafd4b02-030d-4b8b-8f89-88adbb985c91
 
 # Tools
 
-# Data
-
+# Data Source
+- [The Movies Dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset)
+- [Netflix Movies and TV Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
+- [TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
 
 # To-do
 * [ ] ChatAgent 구현
-* [ ] Tools - weather.py 구현 
+* [X] Tools - temperature.py 구현 
 * [ ] Tools - search.py 구현 
 * [ ] streamlit으로 chat 환경 구현
