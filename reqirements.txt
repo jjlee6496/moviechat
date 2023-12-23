@@ -2,3 +2,8 @@ openai
 langchain
 streamlit
 python-dotenv
+
+# 크롤링
+beautifulsoup4
+lxml
+selenium
