@@ -13,9 +13,15 @@ https://chat.openai.com/share/fafd4b02-030d-4b8b-8f89-88adbb985c91
 - [The Movies Dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset)
 - [Netflix Movies and TV Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
 - [TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+- [Daum 영화 상영작](https://movie.daum.net/premovie/theater)
+
 
 # To-do
-* [ ] ChatAgent 구현
 * [X] Tools - temperature.py 구현 
-* [ ] Tools - search.py 구현 
-* [ ] streamlit으로 chat 환경 구현
+* [X] Tools - search.py 구현
+* [x] Tools - search.py 검색결과 정제(길이 줄이기 및 예외처리)
+* [X] Tools - mbti.py 구현
+* [ ] RAG pipline 추가
+* [ ] Chain fallbacks 처리
+* [ ] ChatAgent 구현 - 메모리 사용해서 이전 대화 기억하도록
+* [ ] streamlit front
