@@ -7,3 +7,6 @@ python-dotenv
 beautifulsoup4
 lxml
 selenium
+
+# search
+google-search-results
