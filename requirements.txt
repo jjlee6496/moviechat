@@ -10,3 +10,7 @@ selenium
 
 # search
 google-search-results
+
+# RAG
+chromadb
+sentence-transformers
