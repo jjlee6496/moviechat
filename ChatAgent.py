@@ -51,7 +51,7 @@ class ChatAgent():
     def __init__(self, tools, **params):
         super(ChatAgent, self).__init__( **params)
         self.functions = [format_tool_to_openai_function(f) for f in [get_current_temperature, get_serpapi_search, get_mbti_explaination]]
-        self.model = ChatOpenAI(temperature=0.4).bind(functions=self.functions)
+        self.model = ChatOpenAI(temperature=0.4, max_tokens=1024).bind(functions=self.functions)
         self.memory = ConversationBufferWindowMemory(return_messages=True, memory_key='chat_history', input_key='input', k=5)
         self.prompt = ChatPromptTemplate.from_messages([
             ("system", prompt1_system),
@@ -62,7 +62,7 @@ class ChatAgent():
         self.chain = RunnablePassthrough.assign(
         agent_scratchpad = lambda x: format_to_openai_functions(x["intermediate_steps"])
          ) | self.prompt | self.model | OpenAIFunctionsAgentOutputParser()
-        self.qa = AgentExecutor(agent=self.chain, tools=tools, memory=self.memory)
+        self.qa = AgentExecutor(agent=self.chain, tools=tools, memory=self.memory, verbose=True)
     
     def convchain(self, query):
         if not query:
