@@ -16,36 +16,36 @@ from Tools.temperature import get_current_temperature
 from Tools.mbti import get_mbti_explaination
 from Tools.latest import LatestmovieTool
 
-from typing import Optional, Dict, Any
-from langchain.callbacks.manager import CallbackManagerForChainRun, AsyncCallbackManagerForChainRun
-class CustomAgentExecutor(AgentExecutor):
-    def _return(
-        self,
-        output: AgentFinish,
-        intermediate_steps: list,
-        run_manager: Optional[CallbackManagerForChainRun] = None,
-    ) -> Dict[str, Any]:
-        if run_manager:
-            run_manager.on_agent_finish(output, color="green", verbose=self.verbose)
-        final_output = output.return_values
-        if self.return_intermediate_steps:
-            final_output = {"output": final_output, "intermediate_steps": intermediate_steps}
-        return final_output
+# from typing import Optional, Dict, Any
+# from langchain.callbacks.manager import CallbackManagerForChainRun, AsyncCallbackManagerForChainRun
+# class CustomAgentExecutor(AgentExecutor):
+#     def _return(
+#         self,
+#         output: AgentFinish,
+#         intermediate_steps: list,
+#         run_manager: Optional[CallbackManagerForChainRun] = None,
+#     ) -> Dict[str, Any]:
+#         if run_manager:
+#             run_manager.on_agent_finish(output, color="green", verbose=self.verbose)
+#         final_output = output.return_values
+#         if self.return_intermediate_steps:
+#             final_output = {"output": final_output, "intermediate_steps": intermediate_steps}
+#         return final_output
 
-    async def _areturn(
-        self,
-        output: AgentFinish,
-        intermediate_steps: list,
-        run_manager: Optional[AsyncCallbackManagerForChainRun] = None,
-    ) -> Dict[str, Any]:
-        if run_manager:
-            await run_manager.on_agent_finish(
-                output, color="green", verbose=self.verbose
-            )
-        final_output = output.return_values
-        if self.return_intermediate_steps:
-            final_output = {"output": final_output, "intermediate_steps": intermediate_steps}
-        return final_output
+#     async def _areturn(
+#         self,
+#         output: AgentFinish,
+#         intermediate_steps: list,
+#         run_manager: Optional[AsyncCallbackManagerForChainRun] = None,
+#     ) -> Dict[str, Any]:
+#         if run_manager:
+#             await run_manager.on_agent_finish(
+#                 output, color="green", verbose=self.verbose
+#             )
+#         final_output = output.return_values
+#         if self.return_intermediate_steps:
+#             final_output = {"output": final_output, "intermediate_steps": intermediate_steps}
+#         return final_output
     
 class ChatAgent():
     def __init__(self, tools, **params):
