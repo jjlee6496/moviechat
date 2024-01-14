@@ -21,4 +21,4 @@ def get_latest_movies() -> dict:
     Returns: 다음 영화에서 크롤링한 최신 영화 정보를 리턴한다.
     현재는 그냥 데이터프레임을 넘기지만 나중에 agent화 할 예정.
     """
-    return pd.read_csv('./data/daum_movie/movie_list.csv')[['제목','평점','예매율','개봉일','줄거리']].head().to_dict()
+    return pd.read_csv('./data/daum_movie/data.csv', encoding='cp949')[['제목','평점','예매율','개봉일','줄거리']].head().to_dict()
